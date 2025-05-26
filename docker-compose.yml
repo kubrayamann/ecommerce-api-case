@@ -12,7 +12,7 @@ services:
       - laravel_network
     depends_on:
       - mysql
-    command: sh -c "php artisan migrate --seed && php-fpm"
+    command: sh -c "php artisan migrate:fresh --seed && php-fpm"
 
   nginx:
     image: nginx:alpine
